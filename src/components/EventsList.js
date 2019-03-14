@@ -5,7 +5,7 @@ class EventsList extends Component {
     render(){
         // console.log(this.props)
         if (this.props.events === null){
-            return "Loading.."
+            return "Loading..."
         } else {
             return (
                 <ul>

@@ -14,7 +14,7 @@ function EventForm (props) {
                 Description:
                 <input type="text" name="description" value={props.values.description} onChange={props.onChange} />
                 Date:
-                <input type={Date} name="date" value={props.values.date} onChange={props.onChange} />
+                <input type="date" name="date" value={props.values.date} onChange={props.onChange} />
             </label>
             <input type="submit" value="Submit" />
         </form>

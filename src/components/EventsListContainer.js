@@ -9,6 +9,7 @@ class EventsListContainer extends React.Component {
   }
 
   render() {
+    console.log(this.props)
     return <EventsList events={this.props.events} />
   }
 }

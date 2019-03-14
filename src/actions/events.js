@@ -37,6 +37,7 @@ export const createEvent = (data) => dispatch => {
     .catch(console.error)
 }
 
+
 const eventFetched = event =>({
   type: EVENT_FETCHED,
   event 
