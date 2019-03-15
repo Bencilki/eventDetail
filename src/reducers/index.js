@@ -1,7 +1,7 @@
 import {combineReducers} from 'redux'
-import {eventFetched, eventsFetched} from './events'
+import events from './events'
+import event from './event'
 
 export default combineReducers({
-    eventFetched: eventFetched, 
-    events: eventsFetched
+    events, event
 })

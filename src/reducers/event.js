@@ -1,10 +1,14 @@
-import EVENT_FETCHED from '../actions/events'
+import {EVENT_FETCHED,EVENT_UPDATE_SUCCESS} from '../actions/events'
 
-export const eventFetched = (state = null, action) => {
+const eventFetched = (state = null, action) => {
     switch (action.type) {
       case EVENT_FETCHED:
         return  action.event;
+      case EVENT_UPDATE_SUCCESS:
+        return action.event;
       default:
-        return null;
+        return state;
     }
 }
+
+export default eventFetched

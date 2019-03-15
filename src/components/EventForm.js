@@ -5,7 +5,6 @@ function EventForm (props) {
         // console.log(props.values)
         // console.log(props.onSubmit)
         // console.log(state)
-
     return (
         <form onSubmit={props.onSubmit}>
             <label>

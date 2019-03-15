@@ -1,24 +1,19 @@
-import { Link } from 'react-router-dom';
-import React, {Component} from "react";
+import React from 'react'
+import {Link} from 'react-router-dom'
+import CreateEventFormContainer from './CreateEventFormContainer'
 
-class EventsList extends Component {
-    render(){
-        // console.log(this.props)
-        if (this.props.events === null){
-            return "Loading..."
-        } else {
-            return (
-                <ul>
-                    {this.props.events.map(event => {
-                        // console.log(event.id)
-                        return <li key={event.id}>
-                            <Link to="/events/:id">{event.name}</Link></li>
-                    })}                 
-                </ul>
-            )    
+export default function EventsList(props) {
+  return (
+    <div>
+      <ul>
+        { props.events && props.events.map(event => (
+          <li key={event.id}><Link to={`/events/${event.id}`}>
+                { event.name }</Link></li>
+        )) 
         }
-    }
+        { !props.events && <li>Loading events...</li> }
+      </ul>
+      <CreateEventFormContainer />
+    </div>
+  )
 }
-
-
-export default EventsList
